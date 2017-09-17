@@ -4891,7 +4891,7 @@ ul.comments .comment-block,
 .horizontal-scroll-item .thumb-info .thumb-info-wrapper:after,
 .portfolio-detail-image-item .thumb-info .thumb-info-wrapper:after,
 .portfolio-item .thumb-info .thumb-info-wrapper:after {
-	background: rgba(24, 32, 39, 0.5) !important;
+	/*background: rgba(24, 32, 39, 0.5) !important;*/
 }
 
 .portfolio-parallax:not(.portfolio-parallax-demo-2):hover:before {

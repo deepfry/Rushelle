@@ -13,3 +13,13 @@ p,a,span,input,textarea
 .bg-gradient
 	for key, value in $gradient
 		{key}:value
+		
+
+// --- --- --- Header
+header
+	.logo
+		height 70px
+		image-rendering -webkit-optimize-contrast
+.thumb-info .thumb-info-wrapper:after
+	for key, value in $gradientOverlay
+		{key}:value
