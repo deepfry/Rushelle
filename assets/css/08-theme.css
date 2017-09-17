@@ -40,8 +40,8 @@ li {
 
 #header .header-body {
 	/*background: #FFF;*/
-	border-top: 3px solid #EDEDED;
-	border-bottom: 1px solid transparent;
+	/*border-top: 3px solid #EDEDED;
+	border-bottom: 1px solid transparent;*/
 	padding: 8px 0;
 	-webkit-transition: min-height 0.3s ease;
 	-moz-transition: min-height 0.3s ease;
