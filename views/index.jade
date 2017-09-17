@@ -1,0 +1,271 @@
+extends layout
+
+block content
+
+	.container
+		ul.nav.nav-pills.sort-source(data-sort-id='portfolio', data-option-key='filter', data-plugin-options="{'layoutMode': 'masonry', 'filter': '*'}")
+			li.active(data-option-value='*')
+				a(href='#') Show All
+			li(data-option-value='.websites')
+				a(href='#') Websites
+			li(data-option-value='.logos')
+				a(href='#') Logos
+			li(data-option-value='.brands')
+				a(href='#') Brands
+			li(data-option-value='.medias')
+				a(href='#') Medias
+		hr
+		.row
+			.sort-destination-loader.sort-destination-loader-showing
+				ul.portfolio-list.sort-destination(data-sort-id='portfolio')
+					li.col-md-3.col-sm-6.col-xs-12.isotope-item.brands
+						.portfolio-item
+							a(href='portfolio-single-small-slider.html')
+								span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
+									span.thumb-info-wrapper
+										img.img-responsive(src='img/proto/projects/project-masonry.jpg', alt='')
+										span.thumb-info-title
+											span.thumb-info-inner Presentation
+											span.thumb-info-type Brand
+					li.col-md-3.col-sm-6.col-xs-12.isotope-item.logos
+						.portfolio-item
+							a(href='portfolio-single-small-slider.html')
+								span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
+									span.thumb-info-wrapper
+										img.img-responsive(src='img/proto/projects/project-masonry-2.jpg', alt='')
+										span.thumb-info-title
+											span.thumb-info-inner Identity
+											span.thumb-info-type Logo
+					li.col-md-3.col-sm-6.col-xs-12.isotope-item.brands
+						.portfolio-item
+							a(href='portfolio-single-small-slider.html')
+								span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
+									span.thumb-info-wrapper
+										img.img-responsive(src='img/proto/projects/project-masonry-3.jpg', alt='')
+										span.thumb-info-title
+											span.thumb-info-inner Watch Mockup
+											span.thumb-info-type Brand
+					li.col-md-3.col-sm-6.col-xs-12.isotope-item.brands
+						.portfolio-item
+							a(href='portfolio-single-small-slider.html')
+								span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
+									span.thumb-info-wrapper
+										img.img-responsive(src='img/proto/projects/project-masonry-5.jpg', alt='')
+										span.thumb-info-title
+											span.thumb-info-inner Company T-Shirt
+											span.thumb-info-type Brand
+					li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+						.portfolio-item
+							a(href='portfolio-single-small-slider.html')
+								span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
+									span.thumb-info-wrapper
+										img.img-responsive(src='img/proto/projects/project-masonry-6.jpg', alt='')
+										span.thumb-info-title
+											span.thumb-info-inner Mobile Mockup
+											span.thumb-info-type Website
+					li.col-md-3.col-sm-6.col-xs-12.isotope-item.medias
+						.portfolio-item
+							a(href='portfolio-single-small-slider.html')
+								span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
+									span.thumb-info-wrapper
+										img.img-responsive(src='img/proto/projects/project-masonry-7.jpg', alt='')
+										span.thumb-info-title
+											span.thumb-info-inner Porto Label
+											span.thumb-info-type Media
+					li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+						.portfolio-item
+							a(href='portfolio-single-small-slider.html')
+								span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
+									span.thumb-info-wrapper
+										img.img-responsive(src='img/proto/projects/project-masonry-24.jpg', alt='')
+										span.thumb-info-title
+											span.thumb-info-inner Tablet Screen
+											span.thumb-info-type Website
+					li.col-md-3.col-sm-6.col-xs-12.isotope-item.medias
+						.portfolio-item
+							a(href='portfolio-single-small-slider.html')
+								span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
+									span.thumb-info-wrapper
+										img.img-responsive(src='img/proto/projects/project-masonry-25.jpg', alt='')
+										span.thumb-info-title
+											span.thumb-info-inner Black Watch
+											span.thumb-info-type Media
+					li.col-md-3.col-sm-6.col-xs-12.isotope-item.websites
+						.portfolio-item
+							a(href='portfolio-single-small-slider.html')
+								span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
+									span.thumb-info-wrapper
+										img.img-responsive(src='img/proto/projects/project-masonry-26.jpg', alt='')
+										span.thumb-info-title
+											span.thumb-info-inner Monitor Mockup
+											span.thumb-info-type Website
+
+
+
+	//-#main.main(role='main')
+					.container.p-none
+						#photographyLightbox.mfp-hide
+							.thumb-gallery
+								#thumbGalleryDetail.owl-carousel.owl-theme.manual.thumb-gallery-detail
+									div
+										span.img-thumbnail
+											img.img-responsive(alt='', src='/img/demos/photography/gallery/wedding/1.jpg')
+									div
+										span.img-thumbnail
+											img.img-responsive(alt='', src='/img/demos/photography/gallery/wedding/2.jpg')
+									div
+										span.img-thumbnail
+											img.img-responsive(alt='', src='/img/demos/photography/gallery/wedding/3.jpg')
+									div
+										span.img-thumbnail
+											img.img-responsive(alt='', src='/img/demos/photography/gallery/family/1.jpg')
+									div
+										span.img-thumbnail
+											img.img-responsive(alt='', src='/img/demos/photography/gallery/family/2.jpg')
+									div
+										span.img-thumbnail
+											img.img-responsive(alt='', src='/img/demos/photography/gallery/family/3.jpg')
+									div
+										span.img-thumbnail
+											img.img-responsive(alt='', src='/img/demos/photography/gallery/landscape/1.jpg')
+									div
+										span.img-thumbnail
+											img.img-responsive(alt='', src='/img/demos/photography/gallery/landscape/2.jpg')
+									div
+										span.img-thumbnail
+											img.img-responsive(alt='', src='/img/demos/photography/gallery/landscape/3.jpg')
+									div
+										span.img-thumbnail
+											img.img-responsive(alt='', src='/img/demos/photography/gallery/lifestyle/1.jpg')
+									div
+										span.img-thumbnail
+											img.img-responsive(alt='', src='/img/demos/photography/gallery/lifestyle/2.jpg')
+									div
+										span.img-thumbnail
+											img.img-responsive(alt='', src='/img/demos/photography/gallery/lifestyle/3.jpg')
+								#thumbGalleryThumbs.owl-carousel.owl-theme.manual.thumb-gallery-thumbs.show-thumbs.mt
+									div
+										span.img-thumbnail.cur-pointer
+											img(alt='', src='/img/demos/photography/gallery/wedding/1-thumb.jpg')
+									div
+										span.img-thumbnail.cur-pointer
+											img(alt='', src='/img/demos/photography/gallery/wedding/2-thumb.jpg')
+									div
+										span.img-thumbnail.cur-pointer
+											img(alt='', src='/img/demos/photography/gallery/wedding/3-thumb.jpg')
+									div
+										span.img-thumbnail.cur-pointer
+											img(alt='', src='/img/demos/photography/gallery/family/1-thumb.jpg')
+									div
+										span.img-thumbnail.cur-pointer
+											img(alt='', src='/img/demos/photography/gallery/family/2-thumb.jpg')
+									div
+										span.img-thumbnail.cur-pointer
+											img(alt='', src='/img/demos/photography/gallery/family/3-thumb.jpg')
+									div
+										span.img-thumbnail.cur-pointer
+											img(alt='', src='/img/demos/photography/gallery/landscape/1-thumb.jpg')
+									div
+										span.img-thumbnail.cur-pointer
+											img(alt='', src='/img/demos/photography/gallery/landscape/2-thumb.jpg')
+									div
+										span.img-thumbnail.cur-pointer
+											img(alt='', src='/img/demos/photography/gallery/landscape/3-thumb.jpg')
+									div
+										span.img-thumbnail.cur-pointer
+											img(alt='', src='/img/demos/photography/gallery/lifestyle/1-thumb.jpg')
+									div
+										span.img-thumbnail.cur-pointer
+											img(alt='', src='/img/demos/photography/gallery/lifestyle/2-thumb.jpg')
+									div
+										span.img-thumbnail.cur-pointer
+											img(alt='', src='/img/demos/photography/gallery/lifestyle/3-thumb.jpg')
+						ul#portfolioGrid.p-none
+							span.grid-sizer.col-sm-4.col-md-4
+							li.col-sm-8.col-md-8.isotope-item.p-none
+								.portfolio-grid-item
+									a.text-decoration-none.popup-with-move-anim(href='#photographyLightbox')
+										span.thumb-info
+											span.thumb-info-wrapper.size-1.m-none
+												span.thumb-info-background(style="background-image: url('/img/demos/photography/gallery/wedding/1-medium.jpg');")
+												h2.thumb-info-title.font-weight-bold.center
+													| The Wedding
+													span.thumb-info-sub-title.font-weight-light
+														| Lorem ipsum dolor sit a met
+							li.col-sm-4.col-md-4.isotope-item.p-none
+								.portfolio-grid-item
+									a.text-decoration-none.popup-with-move-anim(href='#photographyLightbox')
+										span.thumb-info
+											span.thumb-info-wrapper.size-2.m-none
+												span.thumb-info-background(style="background-image: url('/img/demos/photography/gallery/wedding/2-small.jpg');")
+												span.thumb-info-plus
+							li.col-sm-4.col-md-4.isotope-item.p-none
+								.portfolio-grid-item
+									a.text-decoration-none.popup-with-move-anim(href='#photographyLightbox')
+										span.thumb-info
+											span.thumb-info-wrapper.size-2.m-none
+												span.thumb-info-background(style="background-image: url('/img/demos/photography/gallery/wedding/3-small.jpg');")
+												span.thumb-info-plus
+							li.col-sm-4.col-md-4.isotope-item.p-none
+								.portfolio-grid-item
+									a.text-decoration-none.popup-with-move-anim(href='#photographyLightbox')
+										span.thumb-info
+											span.thumb-info-wrapper.size-2.m-none
+												span.thumb-info-background(style="background-image: url('/img/demos/photography/gallery/family/1-small.jpg');")
+												span.thumb-info-plus
+							li.col-sm-4.col-md-4.isotope-item.p-none
+								.portfolio-grid-item
+									a.text-decoration-none.popup-with-move-anim(href='#photographyLightbox')
+										span.thumb-info
+											span.thumb-info-wrapper.size-2.m-none
+												span.thumb-info-background(style="background-image: url('/img/demos/photography/gallery/family/2-small.jpg');")
+												span.thumb-info-plus
+							li.col-sm-4.col-md-4.isotope-item.p-none
+								.portfolio-grid-item
+									a.text-decoration-none.popup-with-move-anim(href='#photographyLightbox')
+										span.thumb-info
+											span.thumb-info-wrapper.size-2.m-none
+												span.thumb-info-background(style="background-image: url('/img/demos/photography/gallery/family/3-small.jpg');")
+												span.thumb-info-plus
+							li.col-sm-8.col-md-8.isotope-item.p-none
+								.portfolio-grid-item
+									a.text-decoration-none.popup-with-move-anim(href='#photographyLightbox')
+										span.thumb-info
+											span.thumb-info-wrapper.size-1.m-none
+												span.thumb-info-background(style="background-image: url('/img/demos/photography/gallery/landscape/1-medium.jpg');")
+												span.thumb-info-plus
+							li.col-sm-4.col-md-4.isotope-item.p-none
+								.portfolio-grid-item
+									a.text-decoration-none.popup-with-move-anim(href='#photographyLightbox')
+										span.thumb-info
+											span.thumb-info-wrapper.size-2.m-none
+												span.thumb-info-background(style="background-image: url('/img/demos/photography/gallery/landscape/2-small.jpg');")
+												span.thumb-info-plus
+							li.col-sm-4.col-md-4.isotope-item.p-none
+								.portfolio-grid-item
+									a.text-decoration-none.popup-with-move-anim(href='#photographyLightbox')
+										span.thumb-info
+											span.thumb-info-wrapper.size-2.m-none
+												span.thumb-info-background(style="background-image: url('/img/demos/photography/gallery/landscape/3-small.jpg');")
+												span.thumb-info-plus
+							li.col-sm-4.col-md-4.isotope-item.p-none
+								.portfolio-grid-item
+									a.text-decoration-none.popup-with-move-anim(href='#photographyLightbox')
+										span.thumb-info
+											span.thumb-info-wrapper.size-2.m-none
+												span.thumb-info-background(style="background-image: url('/img/demos/photography/gallery/lifestyle/1-small.jpg');")
+												span.thumb-info-plus
+							li.col-sm-4.col-md-4.isotope-item.p-none
+								.portfolio-grid-item
+									a.text-decoration-none.popup-with-move-anim(href='#photographyLightbox')
+										span.thumb-info
+											span.thumb-info-wrapper.size-2.m-none
+												span.thumb-info-background(style="background-image: url('/img/demos/photography/gallery/lifestyle/2-small.jpg');")
+												span.thumb-info-plus
+							li.col-sm-4.col-md-4.isotope-item.p-none
+								.portfolio-grid-item
+									a.text-decoration-none.popup-with-move-anim(href='#photographyLightbox')
+										span.thumb-info
+											span.thumb-info-wrapper.size-2.m-none
+												span.thumb-info-background(style="background-image: url('/img/demos/photography/gallery/lifestyle/3-small.jpg');")
+												span.thumb-info-plus
