@@ -3,17 +3,23 @@
 normalize-css()
 base()
 
+// --- --- --- Fonts
 
 h1,h2,h3,h4,h5,h6
 	font-family $trajan !important
 	color $maroon !important
-p,a,span,input,textarea
+p,a,span,input,textarea,pre
 	font-family $openSans !important
+
 	
+
+// --- --- --- Colors
 .bg-gradient
 	for key, value in $gradient
 		{key}:value
 		
+
+
 
 
 
@@ -45,6 +51,9 @@ p,a,span,input,textarea
 	margin-bottom 0 !important
 .unmarg
 	margin 0 !important
+	
+section
+	padding 50px 0
 
 // --- --- --- Header
 header
@@ -58,7 +67,42 @@ header
 	top -10px
 #revolutionSlider
 	padding 0
+	
 
+// --- --- --- Gallery
+.thumb-info-type
+	margin 0 5px
+	background-color $orange !important
+.logo-overlay
+	background-image url(/img/logo/icon-white.png)
+	background-position center center
+	background-size contain
+	background-repeat no-repeat
+	position absolute
+	top 0
+	bottom 0
+	left 0
+	right 0
+	margin auto
+	height 80%
+	z-index 30
+.slider-overlay
+	position absolute
+	height 100%
+	width 100%
+	for key, value in $gradient
+		{key}:value
+.tp-bgimg
+	opacity .8 !important
+.tp-caption
+	for key, value in $gradient
+		{key}:value
+	padding 10px 20px 10px 28px !important
+	
+ul.nav-pills > li.active > a
+	background-color $orange !important
+	
 
+	
 
 

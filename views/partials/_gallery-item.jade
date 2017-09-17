@@ -1,0 +1,44 @@
+extends ../layout
+
+block content
+	section
+		.container.lightbox(data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}}")
+			.row
+				.col-md-12.isotope-item
+					.portfolio-item
+						a(href='#{asset(entry.images[0])}')
+							span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
+								span.thumb-info-wrapper
+									img.img-responsive(src='#{asset(entry.images[0])}', alt='')
+									span.thumb-info-title
+										span.thumb-info-inner= entry.images[0].fields.title
+										span.thumb-info-type 
+											i.fa.fa-search-plus
+			.row
+				ul.portfolio-list(style="margin-top:50px;")
+					
+					
+					- for(var i = 1; i < entry.images.length; ++i){
+						li.col-md-6.isotope-item
+							.portfolio-item
+								a(href='#{asset(entry.images[i])}')
+									span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
+										span.thumb-info-wrapper
+											img.img-responsive(src='#{asset(entry.images[i])}', alt='')
+											span.thumb-info-title
+												span.thumb-info-inner= entry.images[i].fields.title
+												span.thumb-info-type 
+													i.fa.fa-search-plus
+					
+					-}
+											
+	section
+		.container
+			.row
+				.col-sm-12
+					h1= entry.title
+					hr
+			.row
+				.col-sm-12
+					!= entry.description
+					!= JSON.stringify(entry.signature)
