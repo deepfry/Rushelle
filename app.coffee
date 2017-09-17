@@ -28,8 +28,6 @@ module.exports =
 					filters:{
 						'order':''
 					}
-				homeslider:
-					id: 'sliderImage'
 				featured:
 					id: 'galleryImage'
 					filters:{
