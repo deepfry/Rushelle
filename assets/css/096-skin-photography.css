@@ -937,9 +937,9 @@ html .btn-borders.btn-tertiary:focus[disabled]:focus {
 }
 
 html .btn-borders.btn-quaternary {
-	background: transparent;
+	/*background: transparent;
 	border-color: #182027;
-	color: #182027;
+	color: #182027;*/
 	text-shadow: none;
 }
 

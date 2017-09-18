@@ -17,7 +17,17 @@ p,a,span,input,textarea,pre
 .bg-gradient
 	for key, value in $gradient
 		{key}:value
-		
+.btn
+	border-color $orange
+	background #fff
+	color $orange
+	transition 0.2s
+	&:hover
+		color #fff !important
+		border-color #fff !important
+		transition 0.2s
+		for key, value in $gradient
+			{key}:value
 
 
 
