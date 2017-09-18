@@ -33,7 +33,7 @@ module.exports =
 				featured:
 					id: 'galleryImage'
 					filters:{
-						'order':'fields.date'
+						'order':'-fields.date'
 						'fields.featured' : 'true'
 					}
 					path: (e) -> "gallery/#{slugify(e.title)}"
