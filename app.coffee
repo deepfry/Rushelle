@@ -41,7 +41,7 @@ module.exports =
 				gallery:
 					id: 'galleryImage'
 					filters:{
-						'order':'fields.date'
+						'order':'-fields.date'
 					}
 					path: (e) -> "gallery/#{slugify(e.title)}"
 					template: 'views/partials/_gallery-item.jade'
