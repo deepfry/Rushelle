@@ -1,5 +1,6 @@
 extends ../layout
-
+block head
+	title= 'Rushelle.com - ' + entry.title
 block content
 	section
 		.container.lightbox(data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}}")
@@ -15,12 +16,24 @@ block content
 										span.thumb-info-type 
 											i.fa.fa-search-plus
 			if entry.images.length > 1	
+				- var colClass = (entry.images.length -1 > 4) ? 'col-md-4 col-sm-6' : 'col-sm-6'
 				.row
-					ul.portfolio-list(style="margin-top:50px;")
+					ul.nav.nav-pills.sort-source(data-sort-id='portfolio', data-option-key='filter', data-plugin-options="{'layoutMode': 'masonry', 'filter': '*'}" style="display:none;")
+						li.active(data-option-value='*')
+							a(href='#') Show All
+						li(data-option-value='.websites')
+							a(href='#') Websites
+						li(data-option-value='.logos')
+							a(href='#') Logos
+						li(data-option-value='.brands')
+							a(href='#') Brands
+						li(data-option-value='.medias')
+							a(href='#') Medias
+					ul.portfolio-list.sort-destination(data-sort-id='portfolio', style="margin-top:50px;")
 						
 						
 						- for(var i = 1; i < entry.images.length; ++i){
-							li.col-md-6.isotope-item
+							li.isotope-item(class='#{colClass}')
 								.portfolio-item
 									a(href='#{asset(entry.images[i])}')
 										span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
@@ -41,7 +54,7 @@ block content
 					hr
 			.row
 				.col-sm-12
-					!= entry.description
+					p= entry.description
 					!= entry.signature.fields.text
 
 

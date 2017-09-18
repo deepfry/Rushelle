@@ -1,5 +1,6 @@
 extends layout
-
+block head
+	title= 'Rushelle.com'
 block content
 
 	//-section.page-header.parallax.section.section-text-light.section-parallax.section-center.height-70.unmarg-t(data-plugin-parallax='', data-plugin-options="{'speed': 1.5}", data-image-src='/img/test.jpg')
@@ -55,7 +56,7 @@ block content
 						if item.category.length > 0
 							for item2 in item.category
 								- classes += ' ' + item2.fields.categorySlug
-						li.col-md-3.col-sm-6.col-xs-12.isotope-item(class="#{classes}")
+						li.col-md-4.col-sm-6.col-xs-12.isotope-item(class="#{classes}")
 							.portfolio-item
 								a(href='#{item._url}')
 									span.thumb-info.thumb-info-centered-info.thumb-info-no-borders

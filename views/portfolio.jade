@@ -1,5 +1,6 @@
 extends layout
-
+block head
+	title= 'Rushelle.com - Portfolio'
 block content
 	section
 		.container
@@ -12,6 +13,27 @@ block content
 			hr
 			.row
 				
+				//-.sort-destination-loader.sort-destination-loader-showing
+					ul.portfolio-list.sort-destination(data-sort-id='portfolio')
+						for item in contentful.featured	
+							- var classes = ''
+							if item.category.length > 0
+								for item2 in item.category
+									- classes += ' ' + item2.fields.categorySlug
+							li.col-md-4.isotope-item(class="#{classes}")
+								.portfolio-item
+									a(href='#{item._url}')
+										span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
+											span.thumb-info-wrapper
+												img.img-responsive(src='#{item._url}', alt='')
+												span.thumb-info-title
+													span.thumb-info-inner= item.title
+													if item.category.length > 0
+														for item3 in item.category
+															span.thumb-info-type= item3.fields.categoryName
+												
+
+
 				ul.portfolio-list.sort-destination(data-sort-id='portfolio')
 					
 					for item in contentful.featured
@@ -20,7 +42,7 @@ block content
 						if item.category.length > 0
 							for item2 in item.category
 								- classes += ' ' + item2.fields.categorySlug
-						li.col-md-3.col-sm-6.col-xs-12.isotope-item(class="#{classes}")
+						li.col-md-4.col-sm-6.col-xs-12.isotope-item(class="#{classes}")
 							.portfolio-item
 								a(href='#{item._url}')
 									span.thumb-info.thumb-info-centered-info.thumb-info-no-borders
