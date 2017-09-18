@@ -50,7 +50,9 @@ block content
 		.container
 			.row
 				.col-sm-12
-					h1= entry.title
+					- var date = new Date(entry.date);
+					h1.unmarg= entry.title
+					h3= date.getFullYear()
 					hr
 			.row
 				.col-sm-12
