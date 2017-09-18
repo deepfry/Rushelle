@@ -17,7 +17,10 @@ block content
 						strong Error!
 						|  There was an error sending your message.
 						span#mailErrorMessage.font-size-xs.mt-sm.display-block
-					form#contactFormCustom.form(novalidate='novalidate' netlify name='Contact Form')
+					form#contactFormCustom.form(novalidate='novalidate' netlify name='Contact Form', netlify-honeypot="bot-field")
+						.row.hidden
+							label Don’t fill this out: 
+								input(name="bot-field")
 						.row
 							.form-group.align-left
 								.col-md-12
