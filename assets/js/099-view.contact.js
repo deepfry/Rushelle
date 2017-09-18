@@ -38,24 +38,26 @@ Theme Version:	5.7.2
 
 				if (data.response == 'success') {
 
-					$messageSuccess.removeClass('hidden');
-					$messageError.addClass('hidden');
+					console.log('SUCCESS')
 
-					// Reset Form
-					$form.find('.form-control')
-						.val('')
-						.blur()
-						.parent()
-						.removeClass('has-success')
-						.removeClass('has-error')
-						.find('label.error')
-						.remove();
+					// $messageSuccess.removeClass('hidden');
+					// $messageError.addClass('hidden');
 
-					if (($messageSuccess.offset().top - 80) < $(window).scrollTop()) {
-						$('html, body').animate({
-							scrollTop: $messageSuccess.offset().top - 80
-						}, 300);
-					}
+					// // Reset Form
+					// $form.find('.form-control')
+					// 	.val('')
+					// 	.blur()
+					// 	.parent()
+					// 	.removeClass('has-success')
+					// 	.removeClass('has-error')
+					// 	.find('label.error')
+					// 	.remove();
+
+					// if (($messageSuccess.offset().top - 80) < $(window).scrollTop()) {
+					// 	$('html, body').animate({
+					// 		scrollTop: $messageSuccess.offset().top - 80
+					// 	}, 300);
+					// }
 
 					$submitButton.button('reset');
 					
