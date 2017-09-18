@@ -27,3 +27,11 @@ html.photography-demo-2
     script(src='https://use.typekit.net/xdy2gst.js')
     script.
         try{Typekit.load({ async: true });}catch(e){}
+
+    // Global Site Tag (gtag.js) - Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-106641857-1')
+    script.
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments)};
+        gtag('js', new Date());
+        gtag('config', 'UA-106641857-1');
