@@ -42,7 +42,6 @@ module.exports =
 					id: 'galleryImage'
 					filters:{
 						'order':'fields.date'
-						#'fields.category.fields.categoryName' : 'Featured'
 					}
 					path: (e) -> "gallery/#{slugify(e.title)}"
 					template: 'views/partials/_gallery-item.jade'
