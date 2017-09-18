@@ -19,7 +19,8 @@ html.photography-demo-2
 
   body.loading-overlay-showing(data-loading-overlay)
     include partials/_header
-    block content
+    .content
+        block content
     include partials/_footer
 
     != js("/")
