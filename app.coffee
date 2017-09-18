@@ -25,11 +25,10 @@ module.exports =
 					##write: 'data.json' ##write a JSON file with the data
 				categories:
 					id: 'category'
-					filters:{
-						'order':''
-					}
 				homeslider:
 					id: 'sliderImage'
+				about:
+					id: 'aboutPage'
 				featured:
 					id: 'galleryImage'
 					filters:{
