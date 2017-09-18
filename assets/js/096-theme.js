@@ -2880,40 +2880,40 @@ window.theme.fn = {
 				self.$wrapper.validate({
 					submitHandler: function(form) {
 
-						$.ajax({
-							type: 'POST',
-							url: self.$wrapper.attr('action'),
-							data: {
-								'email': $email.val()
-							},
-							dataType: 'json',
-							success: function(data) {
-								if (data.response == 'success') {
+						// $.ajax({
+						// 	type: 'POST',
+						// 	url: self.$wrapper.attr('action'),
+						// 	data: {
+						// 		'email': $email.val()
+						// 	},
+						// 	dataType: 'json',
+						// 	success: function(data) {
+						// 		if (data.response == 'success') {
 
-									$success.removeClass('hidden');
-									$error.addClass('hidden');
+						// 			$success.removeClass('hidden');
+						// 			$error.addClass('hidden');
 
-									$email
-										.val('')
-										.blur()
-										.closest('.control-group')
-										.removeClass('success')
-										.removeClass('error');
+						// 			$email
+						// 				.val('')
+						// 				.blur()
+						// 				.closest('.control-group')
+						// 				.removeClass('success')
+						// 				.removeClass('error');
 
-								} else {
+						// 		} else {
 
-									$error.html(data.message);
-									$error.removeClass('hidden');
-									$success.addClass('hidden');
+						// 			$error.html(data.message);
+						// 			$error.removeClass('hidden');
+						// 			$success.addClass('hidden');
 
-									$email
-										.blur()
-										.closest('.control-group')
-										.removeClass('success')
-										.addClass('error');
+						// 			$email
+						// 				.blur()
+						// 				.closest('.control-group')
+						// 				.removeClass('success')
+						// 				.addClass('error');
 
-								}
-							}
+						// 		}
+						// 	}
 						});
 
 					},
