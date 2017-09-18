@@ -34,7 +34,7 @@ block content
 
 	section
 		.container
-			//-ul.nav.nav-pills.sort-source(data-sort-id='portfolio', data-option-key='filter', data-plugin-options="{'layoutMode': 'masonry', 'filter': '*'}")
+			ul.nav.nav-pills.sort-source(data-sort-id='portfolio', data-option-key='filter', data-plugin-options="{'layoutMode': 'masonry', 'filter': '*'}", style="display:none;")
 				li.active(data-option-value='*')
 					a(href='#') Show All
 				for item in contentful.categories
