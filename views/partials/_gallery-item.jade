@@ -1,6 +1,9 @@
 extends ../layout
 block head
 	title= 'Rushelle.com - ' + entry.title
+	meta(property="og:image" content="#{asset(entry.images[0])}")
+	meta#page-title(property="og:title" content= entry.title)
+	meta#page-description(property="og:description" content= entry.description)
 block content
 	section
 		.container.lightbox(data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}}")
@@ -58,5 +61,12 @@ block content
 				.col-sm-12
 					p= entry.description
 					!= entry.signature.fields.text
-
-
+			.row
+				.col-sm-12
+					h3 Share
+			#share-icons.row
+				.col-sm-12
+					a.facebook-share(href="#")
+						i.fa.fa-facebook
+					a.twitter-share(href="#" rel="noopener" target="_blank")
+						i.fa.fa-twitter
