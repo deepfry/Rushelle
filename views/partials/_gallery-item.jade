@@ -6,7 +6,7 @@ block head
 	meta#page-description(property="og:description" content= entry.description)
 block content
 	section
-		.container.lightbox(data-plugin-options="{'delegate': 'a', 'type': 'image', 'gallery': {'enabled': true}}")
+		.container.lightbox(data-plugin-options="{'delegate': '.portfolio-item>a', 'type': 'image', 'gallery': {'enabled': true}}")
 			.row
 				.col-md-12.isotope-item
 					.portfolio-item
