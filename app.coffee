@@ -12,10 +12,10 @@ module.exports =
 	extensions: [
 		js_pipeline(files: ['assets/js/*.coffee', 'assets/**/*.js']),
 		css_pipeline(files: ['assets/css/*.styl', 'assets/**/*.css'])
-	
+
 		contentful
-			access_token: '18bdb58bd1616ff2e763894051a8d6a932f6dc7872379f1af13f11d4bd06cc52'
-			space_id: '6ennsccihdpb'
+			access_token: '66391e41d08566abbc5f99bc5dda732d5461ab80523b2dd666c17c87eab57842'
+			space_id: 'yet7mgppcdzv'
 			content_types:
 				##Variable_name:
 					##id: 'ID' ##FIND THIS ON CONTENTFUL
