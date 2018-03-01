@@ -2,16 +2,6 @@ extends layout
 block head
 	title= 'Rushelle.com'
 	script(src="https://identity.netlify.com/v1/netlify-identity-widget.js")
-	script.
-		if (window.netlifyIdentity) {
-			window.netlifyIdentity.on("init", user => {
-			  if (!user) {
-				window.netlifyIdentity.on("login", () => {
-				  document.location.href = "/admin/";
-				});
-			  }
-			});
-		  }
 block content
 
 	//-section.page-header.parallax.section.section-text-light.section-parallax.section-center.height-70.unmarg-t(data-plugin-parallax='', data-plugin-options="{'speed': 1.5}", data-image-src='/img/test.jpg')
@@ -88,5 +78,15 @@ block content
 											span.thumb-info-title
 												span.thumb-info-inner Presentation
 												span.thumb-info-type Brand
+	script.
+		if (window.netlifyIdentity) {
+			window.netlifyIdentity.on("init", user => {
+				if (!user) {
+					window.netlifyIdentity.on("login", () => {
+						document.location.href = "/admin/";
+					});
+				}
+			});
+		}
 
 						
