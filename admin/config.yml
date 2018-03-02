@@ -7,8 +7,6 @@ production:
     name: git-gateway
     repo: deepfry/Rushelle # Path to your Github repository
     branch: master # Branch to update (master by default)
-    accept_roles:
-      - admin
 
 media_folder: "assets/img/netlifycms" # Folder where user uploaded files should go
 public_folder: "assets"

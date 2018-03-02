@@ -1,70 +1,71 @@
-//- doctype html
-//- html
-//- 	head
-//- 		meta(charset='utf-8')
-//- 		meta(name='viewport', content='width=device-width, initial-scale=1.0')
-//- 		title Content Manager
-//- 		//- Include the styles for the Netlify CMS UI, after your own styles
-//- 		link(rel='stylesheet', href='https://unpkg.com/netlify-cms@^1.0.0/dist/cms.css')
-//- 	body
-//- 		//- Include the script that builds the page and powers Netlify CMS
-//- 		script(src='https://unpkg.com/netlify-cms@^1.0.0/dist/cms.js')
-
 doctype html
 html
-  head
-    meta(charset="utf-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Content Manager
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+		title Content Manager
+		//- Include the styles for the Netlify CMS UI, after your own styles
+		link(rel='stylesheet', href='https://unpkg.com/netlify-cms@^1.0.0/dist/cms.css')
+		script(src="https://identity.netlify.com/v1/netlify-identity-widget.js")
+	body
+		//- Include the script that builds the page and powers Netlify CMS
+		script(src='https://unpkg.com/netlify-cms@^1.0.0/dist/cms.js')
 
-    link(rel="stylesheet", href="//cms.netlify.com/assets/cms.css")
-    link(rel="stylesheet", href="/css/skel.css")
-    link(rel="stylesheet", href="/css/style.css")
-    link(rel="stylesheet", href="/css/style-desktop.css")
-    script(src="https://identity.netlify.com/v1/netlify-identity-widget.js")
-    style.
-      .container {
-        width: auto;
-        max-width: 1200px;
-      }
-      body.ember-application .cms-list-entry {
-        background: #fff;
-      }
-    script!= "CMS_ENV = \"" + (process.env.CMS_ENV || "development") + "\";"
-
-    base(href="/admin/")
-  body
-    script(type="text/x-handlebars" data-template-name='cms/preview/posts').
-      <div id="main-wrapper">
-        <div class="container">
-          <!--Content-->
-          <article class="box post">
-            {{#if entry.banner }}
-            {{cms-preview field='banner'}}
-            {{/if}}
-            <header>
-              <h2>{{ entry.title }}</h2>
-              <p>{{ entry.shortdesc}}</p>
-            </header>
-            {{cms-preview field='body'}}
-          </article>
-        </div>
-      </div>
-
-    script(type="text/x-handlebars" data-template-name='cms/preview/characters').
-      <div id="main-wrapper">
-        <div class="container">
-          {{#cms-preview field="data" as |character| }}
-            <section class="box">
-              <span class="image featured">{{cms-preview field="image" from=character}}</span>
-              <header>
-                <h3>{{character.name}}</h3>
-              </header>
-              <p>{{character.description}}</p>
-            </section>
-          {{/cms-preview}}
-        </div>
-      </div>
-
-    script(src="//cms.netlify.com/assets/vendor.js")
-    script(src="//cms.netlify.com/assets/cms.js")
+//- doctype html
+//- html
+//-   head
+//-     meta(charset="utf-8")
+//-     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+//-     title Content Manager
+//- 
+//-     link(rel="stylesheet", href="//cms.netlify.com/assets/cms.css")
+//-     link(rel="stylesheet", href="/css/skel.css")
+//-     link(rel="stylesheet", href="/css/style.css")
+//-     link(rel="stylesheet", href="/css/style-desktop.css")
+//-     script(src="https://identity.netlify.com/v1/netlify-identity-widget.js")
+//-     style.
+//-       .container {
+//-         width: auto;
+//-         max-width: 1200px;
+//-       }
+//-       body.ember-application .cms-list-entry {
+//-         background: #fff;
+//-       }
+//-     script!= "CMS_ENV = \"" + (process.env.CMS_ENV || "development") + "\";"
+//- 
+//-     base(href="/admin/")
+//-   body
+//-     script(type="text/x-handlebars" data-template-name='cms/preview/posts').
+//-       <div id="main-wrapper">
+//-         <div class="container">
+//-           <!--Content-->
+//-           <article class="box post">
+//-             {{#if entry.banner }}
+//-             {{cms-preview field='banner'}}
+//-             {{/if}}
+//-             <header>
+//-               <h2>{{ entry.title }}</h2>
+//-               <p>{{ entry.shortdesc}}</p>
+//-             </header>
+//-             {{cms-preview field='body'}}
+//-           </article>
+//-         </div>
+//-       </div>
+//- 
+//-     script(type="text/x-handlebars" data-template-name='cms/preview/characters').
+//-       <div id="main-wrapper">
+//-         <div class="container">
+//-           {{#cms-preview field="data" as |character| }}
+//-             <section class="box">
+//-               <span class="image featured">{{cms-preview field="image" from=character}}</span>
+//-               <header>
+//-                 <h3>{{character.name}}</h3>
+//-               </header>
+//-               <p>{{character.description}}</p>
+//-             </section>
+//-           {{/cms-preview}}
+//-         </div>
+//-       </div>
+//- 
+//-     script(src="//cms.netlify.com/assets/vendor.js")
+//-     script(src="//cms.netlify.com/assets/cms.js")
